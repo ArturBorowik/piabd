@@ -1,0 +1,15 @@
+1. logowanie 
+wpisujemy mysql -uroot -p klikamy 2x enter
+2. tworzenie bazy danych 
+piszemy create database nazwa;
+3. pokazywanie baz danych i tabel
+aby wyświetlić tabele wpisujemy show databases;
+aby wyświetlić tabele wpisujemy show tables;
+4. tworzenie tabel 
+aby utworzyć tabele należy wpisać create table nazwa;
+5. używanie baz danych (wejście do baz danych)
+aby wejść do bazy danych należy wpisać use nazwa bazy danych;
+6. aby wyświetlić zawartość tabeli należy wpisać describe lub desc nazwa;
+
+Najważniejsze pamiętać o ; !!!!
+
