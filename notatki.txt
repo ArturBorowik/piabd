@@ -1,0 +1,7 @@
+SELECT * FROM `auto`where cena > 10000 and cena < 35000 order by cena desc limit 3;
+
+/* nierówny za wyjątkiem dwóch 3 rekordy sortowane malejąco -DESC*/;
+
+/*SELECT * FROM `auto`where cena > 10000 and cena < 35000 order by cena desc limit 3 */
+/*SELECT * FROM `auto` WHERE cena BETWEEN 10000 and 35000 order by cena desc limit 3 */
+SELECT* FROM `auto` where kolor BETWEEN 'A' AND 'C' order by typ;; /* kolory od A do C*/
