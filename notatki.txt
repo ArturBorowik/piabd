@@ -5,3 +5,6 @@ SELECT * FROM `auto`where cena > 10000 and cena < 35000 order by cena desc limit
 /*SELECT * FROM `auto`where cena > 10000 and cena < 35000 order by cena desc limit 3 */
 /*SELECT * FROM `auto` WHERE cena BETWEEN 10000 and 35000 order by cena desc limit 3 */
 SELECT* FROM `auto` where kolor BETWEEN 'A' AND 'C' order by typ;; /* kolory od A do C*/
+
+
+insert INTO auto (cena, typ) values ('7000', 'sedan');
