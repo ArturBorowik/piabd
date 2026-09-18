@@ -16,3 +16,4 @@ UPDATE auto set pojemnosc="3.0" where auto_id = 41;
 UPDATE auto set kolor="srebrny" where auto_id = 41;
 UPDATE auto set rocznik="2013" where auto_id = 41;
 UPDATE auto set cena=cena*1.5 where auto_id = 38;
+limit 5,7
