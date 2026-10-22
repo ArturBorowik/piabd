@@ -29,3 +29,20 @@ SELECT id, Concat (imie, ' ', nazwisko) as uczen from uczniowie
 SELECT id, UPPER(imie) AS imie_duzymi_literami, nazwisko from uczniowie;   UPPER wypisuje wilekimi literami podane dane
 23.Wyświetl uczniów urodzonych w czerwcu
 Select imie, nazwisko, data_urodzenia from uczniowie where MONTH(data_urodzenia) = 6 ORDER BY data_urodzenia;  month wbudowane funckje np miesiecy 
+23.1 Wyświetl uczniów urodzonych w czerwcu i grudniu
+Select imie, nazwisko, data_urodzenia from uczniowie where MONTH(data_urodzenia) IN (6,12) ORDER BY data_urodzenia;
+
+23.2 Wyświetl uczniów urodzonych w czerwcu lub grudniu
+Select imie, nazwisko, data_urodzenia from uczniowie where MONTH(data_urodzenia) = 6 OR MONTH(data_urodzenia) = 12 ORDER BY data_urodzenia;
+
+24. oblicz wiek kazdego ucznia 
+SELECT imie, nazwisko, data_urodzenia, TIMESTAMPDIFF( YEAR, data_urodzenia, CURDATE() ) AS wiek from uczniowie order by wiek desc;
+
+25. Wyświetl uczniów, których adres e-mail zawiera nazwisko "kowalski"
+SELECT imie, nazwisko, email from uczniowie where email like '%kowalski%';
+28. Wyświetlanie najstarszego i najmłodszego ucznia według daty urodzenia (same daty )
+Select MIN(data_urodzenia) AS najstarszy, MAX(data_urodzenia) AS najmlodszy,from uczniowie;
+29. Wyświetl uczniów mieszkających w najliczniej reprezentowanej miejscowści
+Select imie, nazwisko, miejscowosc from uczniowie where miejscowosc = (select miejscowos.c from uczniowie group by miejscowosc order by count(*) DESC, miejscowosc ASC limit 1) order by nazwisko, imie;
+31. Wyświetl uczniów, których imie ma dokładnie 5 liter
+Select id, imie, nazwisko FROM uczniowie where CHAR_LENGTH(imie) = 5 order by imie;
