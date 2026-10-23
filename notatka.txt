@@ -46,3 +46,11 @@ Select MIN(data_urodzenia) AS najstarszy, MAX(data_urodzenia) AS najmlodszy,from
 Select imie, nazwisko, miejscowosc from uczniowie where miejscowosc = (select miejscowos.c from uczniowie group by miejscowosc order by count(*) DESC, miejscowosc ASC limit 1) order by nazwisko, imie;
 31. Wyświetl uczniów, których imie ma dokładnie 5 liter
 Select id, imie, nazwisko FROM uczniowie where CHAR_LENGTH(imie) = 5 order by imie;
+32 wysietl trzy ostatnie cyfry numeru telefonu kazdego ucznia
+Select imie, nazwisko, Right(telefon, 3) AS koncowka_telefonu from uczniowie order by nazwisko;
+(uczniowie z orange) do zadania 32 wyswietl uczniow z orange poczatek 502
+Select COUNT(*) AS uczniowie_oragne from uczniowie WHERE telefon lIKE"502%";
+33. Wyświetl nazwiska uczniów zapisane małymi literami
+Select imie, Lower(nazwisko) AS nazwisko_male_litery from uczniowie;
+34. Wyświetl uczniów urodzonych w pierwszym kwartale roku
+Select imie, nazwisko, data_urodzenia from uczniowie where month(data_urodzenia) between 1 and 3 order by data_urodzenia;
