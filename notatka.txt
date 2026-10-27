@@ -54,3 +54,18 @@ Select COUNT(*) AS uczniowie_oragne from uczniowie WHERE telefon lIKE"502%";
 Select imie, Lower(nazwisko) AS nazwisko_male_litery from uczniowie;
 34. Wyświetl uczniów urodzonych w pierwszym kwartale roku
 Select imie, nazwisko, data_urodzenia from uczniowie where month(data_urodzenia) between 1 and 3 order by data_urodzenia;
+
+
+1. dodaj jednego nowego ucznia, podając wszystkie kolumny, w tym indetyfikator
+INSERT INTO uczniowie (id, nazwisko, imie, data_urodzenia, miejscowosc, kod_pocztowy, email, telefon, hobby)
+VALUES
+( NULL, 'Kowalski', 'Adam', '2008-04-15', 'Łódź', '90-001', 'adam.kowalski1001@uczen.example', '599001001', 'szachy');
+2. Dodaj 2 ucznow jednym poleceniem insert
+INSERT INTO uczniowie (id, nazwisko, imie, data_urodzenia, miejscowosc, kod_pocztowy, email, telefon, hobby)
+VALUES
+( NULL, 'Nowak', 'Maja', '2009-02-10', 'Kraków', '30-001', 'maja.nowak1002@uczen.example', '599001002', 'muzyka'),
+( NULL, 'Wiśniewski', 'Filip', '2007-12-03', 'Gdańsk', '80-001', 'filip.wisniewski1003@uczen.example', '599001003', 'pływanie');
+3. dodaj ucznia bez podawania id - niech auto_increment nada je automatycznie
+INSERT INTO uczniowie ( nazwisko, imie, data_urodzenia, miejscowosc, kod_pocztowy, email, telefon, hobby)
+VALUES
+('Mazur', 'Julia', '2008-09-08', 'Łódź', '90-001', 'julia.mazur1004@uczen.example', '599001004', 'szachy');
