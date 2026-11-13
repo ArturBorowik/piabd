@@ -1,5 +1,7 @@
 wyszukaj uczniów z liceum
+select imie, nazwisko, rodzaj_szkoly from pracownicy inner join szkola on pracownicy.szkola = szkola.id where rodzaj_szkoly = 'liceum';
 wyszukaj uczniów nieuczączych się 
+select imie, nazwisko, rodzaj_szkoly from pracownicy inner join szkola on pracownicy.szkola = szkola.id where rodzaj_szkoly = 'nie uczy sie';
 wyszukaj uczniów z liceum ponizej 30000 mieszkancow
 
 polącz tabele
