@@ -55,12 +55,6 @@ if (isset($_POST['wykonaj_skrypt'])) {
         <form method="POST" action="">
             <button type="submit" name="wykonaj_skrypt" class="btn">Uruchom skrypt</button>
         </form>
-
-        <?php if (!empty($komunikat)): ?>
-            <div class="alert">
-                <?php echo $komunikat; ?>
-            </div>
-        <?php endif; ?>
     </main>
 
     <footer>
