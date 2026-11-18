@@ -67,5 +67,7 @@ if (isset($_POST['wykonaj_skrypt'])) {
 </body>
 </html>
 <?php
-$conn->close();
+if (isset($conn) && $conn instanceof mysqli) {
+    $conn->close();
+}
 ?>
